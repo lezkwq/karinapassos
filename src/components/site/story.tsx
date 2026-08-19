@@ -1,6 +1,11 @@
 import { Reveal } from "./reveal";
 import { EditorialPhoto } from "./photo";
-import { PHOTO_RECEPCAO, PHOTO_SPA } from "./photos";
+import {
+  PHOTO_NOIVA_RETRATO,
+  PHOTO_NOIVA_SILHUETA,
+  PHOTO_RECEPCAO,
+  PHOTO_SPA,
+} from "./photos";
 import { WHATSAPP_NOIVAS, WHATSAPP_SPA } from "./contact";
 
 /** Bloco de história, diagramado como matéria de revista. */
@@ -136,6 +141,23 @@ export function Brides() {
               </a>
             </Reveal>
           </div>
+        </div>
+
+        <div className="mt-16 grid grid-cols-1 gap-10 md:mt-28 lg:grid-cols-12 lg:gap-8">
+          <EditorialPhoto
+            photo={PHOTO_NOIVA_SILHUETA}
+            className="lg:col-span-6 lg:col-start-2"
+            frameClassName="aspect-[4/5] md:aspect-[4/5]"
+            objectPosition="52% 42%"
+            delay={80}
+          />
+          <EditorialPhoto
+            photo={PHOTO_NOIVA_RETRATO}
+            className="lg:col-span-3 lg:col-start-10 lg:pt-40"
+            frameClassName="aspect-[3/4]"
+            objectPosition="62% 30%"
+            delay={200}
+          />
         </div>
       </div>
     </section>
