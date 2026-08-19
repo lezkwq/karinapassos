@@ -4,12 +4,15 @@ import { cn } from "@/lib/utils";
 
 interface EditorialPhotoProps {
   photo: Photo;
-  /** Classe de proporção/altura do container (recortes diferentes por breakpoint). */
+  /** Posicionamento do bloco na grade (colunas, offsets, margens). */
   className?: string;
+  /** Proporção/altura do recorte, podendo variar entre mobile e desktop. */
+  frameClassName?: string;
   /** Ponto focal do recorte, para preservar o assunto principal. */
   objectPosition?: string;
   /** Legenda curta, no tom editorial da página. */
   caption?: string;
+  captionClassName?: string;
   delay?: number;
   priority?: boolean;
 }
@@ -21,15 +24,17 @@ interface EditorialPhotoProps {
 export function EditorialPhoto({
   photo,
   className,
+  frameClassName = "aspect-[4/5]",
   objectPosition = "center",
   caption,
+  captionClassName,
   delay = 0,
   priority = false,
 }: EditorialPhotoProps) {
   return (
     <Reveal delay={delay} className={cn("w-full", className)}>
       <figure className="w-full">
-        <div className="w-full overflow-hidden bg-secondary">
+        <div className={cn("w-full overflow-hidden bg-secondary", frameClassName)}>
           <img
             src={photo.url}
             alt={photo.alt}
@@ -40,7 +45,9 @@ export function EditorialPhoto({
           />
         </div>
         {caption ? (
-          <figcaption className="label-xs mt-4 text-muted-foreground">{caption}</figcaption>
+          <figcaption className={cn("label-xs mt-4 text-muted-foreground", captionClassName)}>
+            {caption}
+          </figcaption>
         ) : null}
       </figure>
     </Reveal>
