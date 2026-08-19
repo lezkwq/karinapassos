@@ -6,6 +6,7 @@ import { Manifesto, Statement } from "@/components/site/statement";
 import { Services } from "@/components/site/services";
 import { Brides, Spa, Story } from "@/components/site/story";
 import { Conversion, Reviews } from "@/components/site/reviews";
+import { LavatoriosBlock, SalaoBlock } from "@/components/site/photo-blocks";
 import { Location, SiteFooter } from "@/components/site/location";
 
 const TITLE = "Point da Beleza | Salão de Beleza e Estética em Blumenau";
@@ -35,10 +36,12 @@ function Index() {
         <Statement />
         <Manifesto />
         <Services />
+        <LavatoriosBlock />
         <Story />
         <Spa />
         <Brides />
         <Reviews />
+        <SalaoBlock />
         <Conversion />
         <Location />
       </main>
