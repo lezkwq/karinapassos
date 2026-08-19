@@ -228,3 +228,8 @@
     animation: none;
   }
 }
+231: 
+232: /* Hide Lovable badge */
+233: #lovable-badge {
+234:   display: none !important;
+235: }
