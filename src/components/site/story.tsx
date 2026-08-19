@@ -68,13 +68,22 @@ export function Spa() {
           </h2>
         </Reveal>
         <div className="mt-16 grid grid-cols-1 gap-8 lg:grid-cols-12 md:mt-28">
-          <Reveal className="lg:col-span-4 lg:col-start-7" delay={160}>
+          <EditorialPhoto
+            photo={PHOTO_SPA}
+            className="lg:col-span-6"
+            frameClassName="aspect-[4/5] lg:aspect-[3/4]"
+            objectPosition="55% 60%"
+            caption="Sala de spa"
+            captionClassName="text-primary-foreground/70"
+            delay={80}
+          />
+          <Reveal className="flex flex-col justify-end lg:col-span-4 lg:col-start-8" delay={160}>
             <p className="text-sm leading-relaxed text-primary-foreground/85">
               O Spa do Point reúne momentos de relaxamento, autocuidado e pausa dentro do próprio
               salão.
             </p>
           </Reveal>
-          <Reveal className="lg:col-span-3" delay={240}>
+          <Reveal className="flex items-end lg:col-span-3 lg:col-start-8" delay={240}>
             <a
               href={WHATSAPP_SPA}
               target="_blank"
