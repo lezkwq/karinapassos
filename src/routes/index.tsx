@@ -9,9 +9,9 @@ import { Conversion, Reviews } from "@/components/site/reviews";
 import { LavatoriosBlock, SalaoBlock } from "@/components/site/photo-blocks";
 import { Location, SiteFooter } from "@/components/site/location";
 
-const TITLE = "Point da Beleza | Salão de Beleza e Estética em Blumenau";
+const TITLE = "Point da Beleza";
 const DESCRIPTION =
-  "Cabelo, unhas, estética, podologia, spa e produção para noivas na Velha, em Blumenau. Point da Beleza, desde 2008.";
+  "Desde 2008 na Velha, o Point da Beleza reúne cabelo, unhas, estética, podologia, spa e produção para noivas em um espaço completo em Blumenau.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
