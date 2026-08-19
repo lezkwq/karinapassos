@@ -1,4 +1,6 @@
 import { Reveal } from "./reveal";
+import { EditorialPhoto } from "./photo";
+import { PHOTO_CABELO_LOIRO } from "./photos";
 
 interface Service {
   number: string;
