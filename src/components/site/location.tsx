@@ -1,13 +1,6 @@
 import { Reveal } from "./reveal";
-import {
-  ADDRESS_LINES,
-  INSTAGRAM,
-  INSTAGRAM_URL,
-  MAPS_URL,
-  PHONE_DISPLAY,
-  PHONE_TEL,
-  WHATSAPP_GERAL,
-} from "./contact";
+import { SocialLinks } from "./social";
+import { ADDRESS_LINES, MAPS_URL, WHATSAPP_GERAL } from "./contact";
 
 export function Location() {
   return (
@@ -38,19 +31,7 @@ export function Location() {
 
           <Reveal delay={120}>
             <p className="label-xs text-muted-foreground">Contato</p>
-            <div className="mt-5 flex flex-col gap-1 text-base text-foreground">
-              <a href={`tel:${PHONE_TEL}`} className="transition-colors hover:text-primary">
-                {PHONE_DISPLAY}
-              </a>
-              <a
-                href={INSTAGRAM_URL}
-                target="_blank"
-                rel="noreferrer"
-                className="transition-colors hover:text-primary"
-              >
-                {INSTAGRAM}
-              </a>
-            </div>
+            <SocialLinks className="mt-6" iconClassName="text-foreground hover:text-primary" />
           </Reveal>
 
           <Reveal delay={200}>
@@ -110,12 +91,7 @@ export function SiteFooter() {
             delay={120}
           >
             <span>Blumenau, SC</span>
-            <a href={INSTAGRAM_URL} target="_blank" rel="noreferrer" className="hover:text-[var(--background)]">
-              {INSTAGRAM}
-            </a>
-            <a href={`tel:${PHONE_TEL}`} className="hover:text-[var(--background)]">
-              {PHONE_DISPLAY}
-            </a>
+            <SocialLinks iconClassName="h-5 w-5 text-[var(--background)]/70 hover:text-[var(--background)]" className="gap-6" />
             <span>Desde 2008</span>
           </Reveal>
         </div>
