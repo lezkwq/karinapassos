@@ -1,6 +1,11 @@
 import { Reveal } from "./reveal";
 import { EditorialPhoto } from "./photo";
-import { PHOTO_RECEPCAO, PHOTO_SPA } from "./photos";
+import {
+  PHOTO_NOIVA_RETRATO,
+  PHOTO_NOIVA_SILHUETA,
+  PHOTO_RECEPCAO,
+  PHOTO_SPA,
+} from "./photos";
 import { WHATSAPP_NOIVAS, WHATSAPP_SPA } from "./contact";
 
 /** Bloco de história, diagramado como matéria de revista. */
