@@ -137,6 +137,23 @@ export function Brides() {
             </Reveal>
           </div>
         </div>
+
+        <div className="mt-16 grid grid-cols-1 gap-10 md:mt-28 lg:grid-cols-12 lg:gap-8">
+          <EditorialPhoto
+            photo={PHOTO_NOIVA_SILHUETA}
+            className="lg:col-span-6 lg:col-start-2"
+            frameClassName="aspect-[4/5] md:aspect-[4/5]"
+            objectPosition="52% 42%"
+            delay={80}
+          />
+          <EditorialPhoto
+            photo={PHOTO_NOIVA_RETRATO}
+            className="lg:col-span-3 lg:col-start-10 lg:pt-40"
+            frameClassName="aspect-[3/4]"
+            objectPosition="62% 30%"
+            delay={200}
+          />
+        </div>
       </div>
     </section>
   );
