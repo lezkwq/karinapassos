@@ -38,6 +38,15 @@ export function Story() {
             especial ou simplesmente reservar um tempo para si.
           </p>
         </Reveal>
+
+        <EditorialPhoto
+          photo={PHOTO_RECEPCAO}
+          className="mt-14 lg:col-span-6 lg:col-start-7 lg:mt-24"
+          frameClassName="aspect-[4/5] md:aspect-[16/10]"
+          objectPosition="18% 45%"
+          caption="Recepção — Point da Beleza"
+          delay={120}
+        />
       </div>
     </section>
   );
