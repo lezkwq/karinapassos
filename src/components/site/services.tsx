@@ -72,6 +72,16 @@ export function Services() {
           ))}
         </ul>
         <Reveal variant="rule" className="h-px w-full bg-foreground/20" />
+
+        <div className="mt-16 grid grid-cols-1 gap-8 md:mt-24 lg:grid-cols-12">
+          <EditorialPhoto
+            photo={PHOTO_CABELO_LOIRO}
+            className="lg:col-span-4 lg:col-start-8"
+            frameClassName="aspect-[4/5]"
+            objectPosition="58% 35%"
+            delay={80}
+          />
+        </div>
       </div>
     </section>
   );
