@@ -67,7 +67,7 @@ export function Hero() {
             priority
             className="lg:col-span-5 lg:col-start-2"
             frameClassName="aspect-[4/5] md:aspect-[3/4]"
-            objectPosition="50% 35%"
+            objectPosition="38% 22%"
             caption="Rua Amazonas, Velha — Blumenau"
           />
           <Reveal className="flex items-end lg:col-span-4 lg:col-start-9" delay={160}>
