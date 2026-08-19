@@ -48,7 +48,7 @@ export function SalaoBlock() {
           photo={PHOTO_SALAO}
           className="lg:col-span-7 lg:col-start-6"
           frameClassName="aspect-[4/5] md:aspect-[4/3]"
-          objectPosition="50% 40%"
+          objectPosition="50% 62%"
           caption="Salão — Velha, Blumenau"
           delay={120}
         />
