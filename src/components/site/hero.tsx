@@ -1,4 +1,6 @@
 import { Reveal } from "./reveal";
+import { EditorialPhoto } from "./photo";
+import { PHOTO_FACHADA } from "./photos";
 import { WHATSAPP_GERAL } from "./contact";
 
 const FACTS = ["4,8 no Google", "339 avaliações", "Desde 2008", "Velha, Blumenau"] as const;
@@ -57,6 +59,22 @@ export function Hero() {
               {fact}
             </Reveal>
           ))}
+        </div>
+
+        <div className="mt-20 grid grid-cols-1 gap-8 md:mt-32 lg:grid-cols-12">
+          <EditorialPhoto
+            photo={PHOTO_FACHADA}
+            priority
+            className="lg:col-span-5 lg:col-start-2"
+            frameClassName="aspect-[4/5] md:aspect-[3/4]"
+            objectPosition="38% 22%"
+            caption="Rua Amazonas, Velha — Blumenau"
+          />
+          <Reveal className="flex items-end lg:col-span-4 lg:col-start-9" delay={160}>
+            <p className="font-display text-[clamp(1.5rem,3vw,2.5rem)] leading-tight text-foreground">
+              O endereço é o mesmo há mais de quinze anos.
+            </p>
+          </Reveal>
         </div>
       </div>
     </section>
