@@ -7,17 +7,17 @@ const FACTS = ["4,8 no Google", "339 avaliações", "Desde 2008", "Velha, Blumen
 
 export function Hero() {
   return (
-    <section id="topo" className="px-6 pb-14 pt-28 md:px-10 md:pb-20 md:pt-40">
+    <section id="topo" className="px-6 pb-14 pt-20 md:px-10 md:pb-20 md:pt-40">
       <div className="mx-auto max-w-[1600px]">
-        <Reveal className="label-xs flex flex-wrap gap-x-6 gap-y-1 text-muted-foreground">
+        <Reveal className="label-xs flex flex-wrap gap-x-6 gap-y-1 text-muted-foreground md:gap-y-4">
           <span>Point da Beleza</span>
           <span>Blumenau, SC</span>
           <span>Desde 2008</span>
         </Reveal>
 
-        <div className="mt-10 grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-8">
+        <div className="mt-6 grid grid-cols-1 gap-10 md:mt-10 lg:grid-cols-12 lg:gap-8">
           <Reveal className="lg:col-span-9" delay={80}>
-            <h1 className="font-display text-[clamp(2.75rem,10.5vw,10rem)] leading-[0.88] text-foreground">
+            <h1 className="font-display text-[clamp(3.5rem,10.5vw,10rem)] leading-[0.85] tracking-tight text-foreground md:leading-[0.88] md:tracking-normal">
               <span className="block">Um salão</span>
               <span className="block">
                 <em className="not-italic text-primary">completo.</em>
@@ -32,18 +32,18 @@ export function Hero() {
               Cabelo, unhas, estética, podologia, spa e produção para noivas. Tudo no mesmo
               endereço, na Velha, em Blumenau.
             </p>
-            <div className="mt-8 flex flex-wrap items-center gap-3">
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
               <a
                 href={WHATSAPP_GERAL}
                 target="_blank"
                 rel="noreferrer"
-                className="label-xs rounded-full bg-primary px-6 py-3.5 text-primary-foreground transition-opacity hover:opacity-90"
+                className="label-xs rounded-full bg-primary px-6 py-3.5 text-center text-primary-foreground transition-opacity hover:opacity-90"
               >
                 Agendar horário
               </a>
               <a
                 href="#servicos"
-                className="label-xs rounded-full border border-foreground/25 px-6 py-3.5 text-foreground transition-colors hover:border-foreground"
+                className="label-xs rounded-full border border-foreground/25 px-6 py-3.5 text-center text-foreground transition-colors hover:border-foreground"
               >
                 Conhecer serviços
               </a>
