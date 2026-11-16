@@ -1,4 +1,4 @@
-import whatsappIcon from "@/assets/icon-whatsapp.png.asset.json";
+import whatsappIcon from "@/assets/icon-whatsapp.png";
 import { WHATSAPP_GERAL } from "./contact";
 
 /** Atalho discreto e persistente para o principal canal de agendamento. */
@@ -16,8 +16,8 @@ export function FloatingCta() {
           aria-hidden="true"
           className="inline-block h-4 w-4 bg-current"
           style={{
-            WebkitMaskImage: `url(${whatsappIcon.url})`,
-            maskImage: `url(${whatsappIcon.url})`,
+            WebkitMaskImage: `url(${whatsappIcon})`,
+            maskImage: `url(${whatsappIcon})`,
             WebkitMaskRepeat: "no-repeat",
             maskRepeat: "no-repeat",
             WebkitMaskPosition: "center",

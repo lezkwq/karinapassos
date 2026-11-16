@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 import { INSTAGRAM_URL, WHATSAPP_GERAL } from "./contact";
-import instagramIcon from "@/assets/icon-instagram.png.asset.json";
-import whatsappIcon from "@/assets/icon-whatsapp.png.asset.json";
+import instagramIcon from "@/assets/icon-instagram.png";
+import whatsappIcon from "@/assets/icon-whatsapp.png";
 
 /** Renderiza o PNG como máscara para que o ícone assuma a cor da composição atual. */
 function MaskIcon({ src, className }: { src: string; className?: string }) {
@@ -40,7 +40,7 @@ export function SocialLinks({ className, iconClassName }: SocialLinksProps) {
         aria-label="Instagram do Salão de Beleza Karina Passos"
         className="inline-flex transition-opacity hover:opacity-60"
       >
-        <MaskIcon src={instagramIcon.url} className={icon} />
+        <MaskIcon src={instagramIcon} className={icon} />
       </a>
       <a
         href={WHATSAPP_GERAL}
@@ -49,7 +49,7 @@ export function SocialLinks({ className, iconClassName }: SocialLinksProps) {
         aria-label="WhatsApp do Salão de Beleza Karina Passos"
         className="inline-flex transition-opacity hover:opacity-60"
       >
-        <MaskIcon src={whatsappIcon.url} className={icon} />
+        <MaskIcon src={whatsappIcon} className={icon} />
       </a>
     </div>
   );
