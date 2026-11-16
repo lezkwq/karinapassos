@@ -1,18 +1,18 @@
 import { Reveal } from "./reveal";
 import { EditorialPhoto } from "./photo";
-import { PHOTO_FACHADA } from "./photos";
+import { PHOTO_KARINA } from "./photos";
 import { WHATSAPP_GERAL } from "./contact";
 
-const FACTS = ["4,8 no Google", "339 avaliações", "Desde 2008", "Velha, Blumenau"] as const;
+const FACTS = ["4,8 no Google", "89 avaliações", "Terapia capilar", "Camboriú, SC"] as const;
 
 export function Hero() {
   return (
     <section id="topo" className="px-6 pb-14 pt-20 md:px-10 md:pb-20 md:pt-40">
       <div className="mx-auto max-w-[1600px]">
         <Reveal className="label-xs flex flex-wrap gap-x-6 gap-y-1 text-muted-foreground md:gap-y-4">
-          <span>Point da Beleza</span>
-          <span>Blumenau, SC</span>
-          <span>Desde 2008</span>
+          <span>Karina Passos</span>
+          <span>Camboriú, SC</span>
+          <span>Terapeuta capilar</span>
         </Reveal>
 
         <div className="mt-6 grid grid-cols-1 gap-10 md:mt-10 lg:grid-cols-12 lg:gap-8">
@@ -29,17 +29,17 @@ export function Hero() {
 
           <Reveal className="flex flex-col justify-end lg:col-span-3" delay={220}>
             <p className="max-w-xs text-sm leading-relaxed text-muted-foreground">
-              Cabelo, unhas, estética, podologia, spa e produção para noivas. Tudo no mesmo
-              endereço, na Velha, em Blumenau.
+              Beleza, cuidado e atenção em cada detalhe. Um espaço preparado para valorizar você e
+              proporcionar uma experiência especial.
             </p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center lg:flex-col lg:items-stretch">
               <a
                 href={WHATSAPP_GERAL}
                 target="_blank"
                 rel="noreferrer"
                 className="label-xs rounded-full bg-primary px-6 py-3.5 text-center text-primary-foreground transition-opacity hover:opacity-90"
               >
-                Agendar horário
+                Agendar pelo WhatsApp
               </a>
               <a
                 href="#servicos"
@@ -54,8 +54,8 @@ export function Hero() {
         <Reveal variant="rule" className="mt-16 h-px w-full bg-foreground/20 md:mt-24" />
 
         <div className="grid grid-cols-2 gap-y-6 pt-6 md:grid-cols-4">
-          {FACTS.map((fact, i) => (
-            <Reveal key={fact} delay={i * 90} className="label-xs text-muted-foreground">
+          {FACTS.map((fact, index) => (
+            <Reveal key={fact} delay={index * 90} className="label-xs text-muted-foreground">
               {fact}
             </Reveal>
           ))}
@@ -63,16 +63,16 @@ export function Hero() {
 
         <div className="mt-20 grid grid-cols-1 gap-8 md:mt-32 lg:grid-cols-12">
           <EditorialPhoto
-            photo={PHOTO_FACHADA}
+            photo={PHOTO_KARINA}
             priority
             className="lg:col-span-5 lg:col-start-2"
             frameClassName="aspect-[4/5] md:aspect-[3/4]"
-            objectPosition="38% 22%"
-            caption="Rua Amazonas, Velha — Blumenau"
+            objectPosition="50% 45%"
+            caption="Karina Passos — Terapeuta Capilar"
           />
           <Reveal className="flex items-end lg:col-span-4 lg:col-start-9" delay={160}>
             <p className="font-display text-[clamp(1.5rem,3vw,2.5rem)] leading-tight text-foreground">
-              O endereço é o mesmo há mais de quinze anos.
+              Cuidado individualizado, do cabelo ao bem-estar.
             </p>
           </Reveal>
         </div>

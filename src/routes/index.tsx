@@ -4,14 +4,15 @@ import { SiteHeader } from "@/components/site/header";
 import { Hero } from "@/components/site/hero";
 import { Manifesto, Statement } from "@/components/site/statement";
 import { Services } from "@/components/site/services";
-import { Brides, Spa, Story } from "@/components/site/story";
+import { Karina, Story, Therapy } from "@/components/site/story";
 import { Conversion, Reviews } from "@/components/site/reviews";
-import { LavatoriosBlock, SalaoBlock } from "@/components/site/photo-blocks";
+import { SalaoBlock, SpaceBlock } from "@/components/site/photo-blocks";
 import { Location, SiteFooter } from "@/components/site/location";
+import { FloatingCta } from "@/components/site/floating-cta";
 
-const TITLE = "Point da Beleza";
+const TITLE = "Salão de Beleza Karina Passos | Terapia Capilar em Camboriú";
 const DESCRIPTION =
-  "Desde 2008 na Velha, o Point da Beleza reúne cabelo, unhas, estética, podologia, spa e produção para noivas em um espaço completo em Blumenau.";
+  "Conheça o Salão Karina Passos em Camboriú. Terapia capilar, cabelos, unhas e serviços de beleza em um ambiente acolhedor. Agende pelo WhatsApp.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -36,16 +37,17 @@ function Index() {
         <Statement />
         <Manifesto />
         <Services />
-        <LavatoriosBlock />
+        <SpaceBlock />
         <Story />
-        <Spa />
-        <Brides />
+        <Therapy />
+        <Karina />
         <Reviews />
         <SalaoBlock />
         <Conversion />
         <Location />
       </main>
       <SiteFooter />
+      <FloatingCta />
     </div>
   );
 }

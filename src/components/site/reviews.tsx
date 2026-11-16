@@ -1,15 +1,11 @@
 import { Reveal } from "./reveal";
-import { WHATSAPP_GERAL, PHONE_DISPLAY } from "./contact";
-
-const REVIEWS = [
-  { quote: "Todos os profissionais são incríveis.", name: "Mayara Polati", source: "Google" },
-  { quote: "Saí muito feliz com o resultado.", name: "Yasmin", source: "Google" },
-] as const;
+import { ReviewCarousel } from "./review-carousel";
+import { WHATSAPP_GERAL } from "./contact";
 
 export function Reviews() {
   return (
-    <section id="avaliacoes" className="px-6 pb-20 md:px-10 md:pb-32">
-      <div className="mx-auto max-w-[1600px]">
+    <section id="avaliacoes" className="pb-20 md:pb-32">
+      <div className="mx-auto max-w-[1600px] px-6 md:px-10">
         <Reveal className="label-xs text-muted-foreground">Quem vem, conta</Reveal>
 
         <div className="mt-8 flex flex-wrap items-end gap-x-10 gap-y-4">
@@ -18,37 +14,36 @@ export function Reviews() {
               4,8
             </p>
           </Reveal>
-          <Reveal className="label-xs pb-4 text-muted-foreground" delay={160}>
-            No Google
-            <br />
-            339 avaliações
+          <Reveal className="pb-4" delay={160}>
+            <p className="text-2xl tracking-[0.18em] text-primary" aria-label="4,8 de 5 estrelas">
+              <span aria-hidden="true">★★★★★</span>
+            </p>
+            <p className="label-xs mt-4 text-muted-foreground">
+              No Google
+              <br />
+              89 avaliações
+            </p>
           </Reveal>
         </div>
 
         <Reveal variant="rule" className="mt-14 h-px w-full bg-foreground/20" />
+      </div>
 
-        <div className="grid grid-cols-1 gap-12 pt-12 md:grid-cols-2 md:gap-20">
-          {REVIEWS.map((review, i) => (
-            <Reveal key={review.name} delay={i * 140}>
-              <div className="flex gap-4">
-                <span
-                  aria-hidden="true"
-                  className="font-display text-[clamp(3rem,6vw,5rem)] leading-[0.7] text-primary"
-                >
-                  &ldquo;
-                </span>
-                <div>
-                  <blockquote className="font-display text-[clamp(1.5rem,3vw,2.5rem)] leading-tight text-foreground">
-                    {review.quote}
-                  </blockquote>
-                  <p className="label-xs mt-6 text-muted-foreground">
-                    {review.name} / {review.source}
-                  </p>
-                </div>
-              </div>
-            </Reveal>
-          ))}
-        </div>
+      <Reveal className="mt-12" delay={100}>
+        <ReviewCarousel />
+      </Reveal>
+
+      <div className="mx-auto mt-12 flex max-w-[1600px] justify-center px-6 md:px-10">
+        <Reveal delay={120}>
+          <a
+            href={WHATSAPP_GERAL}
+            target="_blank"
+            rel="noreferrer"
+            className="label-xs inline-block rounded-full border border-foreground/30 px-8 py-4 text-foreground transition-colors hover:border-primary hover:text-primary"
+          >
+            Quero conhecer o salão
+          </a>
+        </Reveal>
       </div>
     </section>
   );
@@ -61,13 +56,14 @@ export function Conversion() {
       <div className="mx-auto grid max-w-[1600px] grid-cols-1 gap-12 lg:grid-cols-12">
         <Reveal className="lg:col-span-8">
           <h2 className="font-display text-[clamp(2.5rem,8vw,7rem)] leading-[0.92]">
-            Já sabe
-            <br />o que quer fazer?
+            Já sabe o que
+            <br />
+            quer cuidar hoje?
           </h2>
         </Reveal>
         <Reveal className="flex flex-col justify-end lg:col-span-4" delay={140}>
           <p className="text-sm leading-relaxed text-primary-foreground/85">
-            Fale com o Point e consulte os horários disponíveis.
+            Escolha seu próximo momento de cuidado e fale com nossa equipe.
           </p>
           <a
             href={WHATSAPP_GERAL}
@@ -77,7 +73,6 @@ export function Conversion() {
           >
             Agendar pelo WhatsApp
           </a>
-          <p className="label-xs mt-5 text-primary-foreground/70">{PHONE_DISPLAY}</p>
         </Reveal>
       </div>
     </section>

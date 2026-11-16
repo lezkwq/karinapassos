@@ -37,7 +37,7 @@ export function SocialLinks({ className, iconClassName }: SocialLinksProps) {
         href={INSTAGRAM_URL}
         target="_blank"
         rel="noreferrer"
-        aria-label="Instagram do Point da Beleza"
+        aria-label="Instagram do Salão de Beleza Karina Passos"
         className="inline-flex transition-opacity hover:opacity-60"
       >
         <MaskIcon src={instagramIcon.url} className={icon} />
@@ -46,7 +46,7 @@ export function SocialLinks({ className, iconClassName }: SocialLinksProps) {
         href={WHATSAPP_GERAL}
         target="_blank"
         rel="noreferrer"
-        aria-label="WhatsApp do Point da Beleza"
+        aria-label="WhatsApp do Salão de Beleza Karina Passos"
         className="inline-flex transition-opacity hover:opacity-60"
       >
         <MaskIcon src={whatsappIcon.url} className={icon} />
