@@ -1,8 +1,8 @@
 /** Dados oficiais do Salão de Beleza Karina Passos. */
 export const PHONE_DISPLAY = "(47) 99937-4334";
 export const PHONE_TEL = "+5547999374334";
-export const INSTAGRAM = "@karinapassoterapeutacapilar";
-export const INSTAGRAM_URL = "https://www.instagram.com/karinapassoterapeutacapilar/";
+export const INSTAGRAM = "@karinapassosterapeutacapilar";
+export const INSTAGRAM_URL = "https://www.instagram.com/karinapassosterapeutacapilar/";
 export const BIO_URL = "https://bio.site/karinaespacodabeleza";
 
 export const ADDRESS_LINES = [
