@@ -26,11 +26,11 @@ export function Statement() {
       </div>
 
       <div className="mt-16 select-none md:mt-28" aria-hidden="true">
-        <div className="marquee-track flex w-[200%]">
+        <div className="marquee-track flex w-max">
           {[0, 1].map((key) => (
             <span
               key={key}
-              className="font-display flex w-1/2 shrink-0 justify-around text-[clamp(4rem,16vw,15rem)] leading-none text-primary-foreground/25"
+              className="font-display flex shrink-0 gap-[0.35em] pr-[0.35em] whitespace-nowrap text-[clamp(4rem,16vw,15rem)] leading-none text-primary-foreground/25"
             >
               <span>Cuidado</span>
               <span>Beleza</span>
